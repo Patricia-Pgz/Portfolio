@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <style>
+    /* ---------- BASE STYLES ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #0d0d0f;
+      color: #e5e5e5;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #bb86fc;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      color: #d8b4ff;
+    }
+
+    /* ---------- NAVBAR ---------- */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 5%;
+      background: #1a1a1d;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    header h1 {
+      color: #bb86fc;
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      font-size: 1rem;
+    }
+
+    /* ---------- HERO SECTION ---------- */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 80vh;
+      text-align: center;
+      background: linear-gradient(160deg, #0d0d0f 0%, #1a0b2e 100%);
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      color: #bb86fc;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 600px;
+      font-size: 1.1rem;
+      opacity: 0.85;
+    }
+
+    .btn {
+      margin-top: 2rem;
+      padding: 0.8rem 1.8rem;
+      background: #bb86fc;
+      color: #0d0d0f;
+      font-weight: bold;
+      border-radius: 25px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #d8b4ff;
+      transform: translateY(-3px);
+    }
+
+    /* ---------- PROJECTS SECTION ---------- */
+    section {
+      padding: 4rem 5%;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .project-card {
+      background: #1a1a1d;
+      border-radius: 15px;
+      padding: 1.5rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card h3 {
+      color: #bb86fc;
+      margin-bottom: 0.5rem;
+    }
+
+    .job-projects-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 800px;
+      margin: 2rem auto;
+    }
+
+    .job-project {
+      background: #1a1a1d;
+      /* dark card */
+      padding: 1rem 1.2rem;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    .job-project h3 {
+      color: #bb86fc;
+      margin-bottom: 0.3rem;
+      font-size: 1.1rem;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #1a1a1d;
+      color: #999;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #bb86fc;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Hi, I'm Patricia</h2>
+    <p>A passionate developer who loves creating beautiful, intuitive, and modern virtual experiences.</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p style="margin-top:1rem; max-width:700px;">
+      I’ve always been fascinated by the logic and complexity behind games, so I packed my bags, moved 400 km, and dove
+      into a Games Engineering degree.
+      <br>
+      Alongside my studies, I spent several years gaining hands-on experience — about two years developing interactive
+      3D web visualizations with Angular, and over three years creating game-like VR simulations for psychological
+      research in Unity.
+      <br>
+      Through these projects, I handled 2D/3D asset creation and integration, collaborated with researchers and
+      developers, and even trained colleagues along the way. I’ve also gained deep experience with multiple game
+      engines, frameworks, and programming languages — all the way up to developing my own C++/OpenGL game and engine
+      from scratch.
+      <br>
+      I love learning new things and turning ideas into meaningful, engaging experiences for players. I’m excited to
+      find a team where I can put my skills and motivation to work, grow as a developer, and help create something truly
+      special.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Academic Projects</h2>
+    <h3 style="padding-top: 40px;">Game Projects</h3>
+    <div class="projects">
+      <div class="project-card">
+        <h3 style="text-align: center;">Electron X Pulse</h3>
+        <a href="https://youtu.be/ifKLZkkLdE8" target="_blank">
+          <img src="images/electronxpulse4.png" alt="Electron X Pulse Trailer"
+            style="width:100%; border-radius:10px; margin-top:10px;">
+        </a>
+        <p>This project showcases my work with C++ and OpenGL. (Click the image above to watch a short trailer) <br>
+          As part of the final stage of my studies, I developed a 2D side-scrolling platformer with an integrated level
+          editor and a custom engine framework designed for rapid creation of similar games. The gameplay is
+          synchronized to the beat through automatically analyzing audio and adjusting the editor grid to beats as units
+          for the designer.
+          <br>
+          The engine features key systems such as Rendering, Physics, Audio Analysis, UI, State Management, ECS, Level
+          Loading, and a Level Editor.
+        </p>
+      </div>
+      <div class="project-card">
+        <h3 style="text-align: center;">ACP Game</h3>
+        <a href="https://youtu.be/XB-3UnwBPz8" target="_blank">
+          <img src="images/BrotherICU1.png" alt="ACP Game Trailer"
+            style="width:100%; border-radius:10px; margin-top:10px;">
+        </a>
+        <p>My bachelor’s thesis focused on the conceptualization and prototyping of an Advance Care Planning (ACP)
+          serious game. I designed and developed a 3D clue-search game in Unity aimed at raising awareness about ACP —
+          the process of expressing one’s values and wishes for future medical treatment in case of becoming unable to
+          decide for oneself — targeted specifically at young adults. <br>
+          Guided by direct feedback from medical experts, I designed an engaging experience that closely simulates
+          real-life scenarios. Visual (shader) and audio effects as well as cutscenes were used to convey emotions,
+          guiding the storyline and
+          emphasizing the importance of the subject.
+        </p>
+      </div>
+      <div class="project-card">
+        <h3 style="text-align: center;">Runecraft</h3>
+        <div style="text-align: center;">
+          <a href="https://youtu.be/4qDurXSJlxM" target="_blank">
+            <img src="images/Runecraft1.png" alt="Runecraft Trailer"
+              style="width:100%; border-radius:10px; margin-top:10px;">
+          </a>
+        </div>
+        <p> A 3D fantasy VR game using the Unity Game Engine. The player takes up the role of a wizard, drawing runes to
+          select spells and overcome their enemies. Contribution: All level designs, as well as UIs and some gameplay
+          systems. [Teamproject, Assets taken from Unity Asset Store]
+        </p>
+
+        <!-- Button to toggle the image gallery -->
+        <button onclick="toggleGallery()"
+          style="display: block; margin: 20px auto; padding: 10px; border: none; background-color: #bb86fc; color: white; border-radius: 5px; cursor: pointer;">
+          Show Gallery
+        </button>
+
+        <!-- Collapsible image gallery -->
+        <div id="image-gallery" style="display: none; text-align: center;">
+          <img src="images/Ring.jpeg" alt="Runecraft Image 2"
+            style="width: 100%; max-width: 600px; border-radius: 10px; margin-top: 10px;">
+          <img src="images/MainMenu.jpeg" alt="Runecraft Image 3"
+            style="width: 100%; max-width: 600px; border-radius: 10px; margin-top: 10px;">
+          <img src="images/PauseMenu.jpeg" alt="Runecraft Image 4"
+            style="width: 100%; max-width: 600px; border-radius: 10px; margin-top: 10px;">
+          <img src="images/Level2.jpeg" alt="Runecraft Image 5"
+            style="width: 100%; max-width: 600px; border-radius: 10px; margin-top: 10px;">
+          <img src="images/Level3.jpeg" alt="Runecraft Image 6"
+            style="width: 100%; max-width: 600px; border-radius: 10px; margin-top: 10px;">
+        </div>
+      </div>
+      <script>
+        function toggleGallery() {
+          var gallery = document.getElementById("image-gallery");
+          if (gallery.style.display === "none") {
+            gallery.style.display = "block";
+          } else {
+            gallery.style.display = "none";
+          }
+        }
+      </script>
+    </div>
+    <h3 style="padding-top: 40px;">Other Projects</h3>
+    <div class="projects" style="width: 50%;">
+      <div class="project-card">
+        <h3 style="text-align: center;">The Doors of Perception</h3>
+        <div style="text-align: center;">
+          <img src="images/TDoP2.png" style="width:55%; border-radius:10px; margin-top:10px;">
+        </div>
+        <p>The Doors of Perception is a Unity plugin, for game designers to easily set up and trigger multiple
+          perception states with audio, visual(shader) or custom effects, and transitions between them.
+          We additionally created different demo VR environments to visualize application of the tool for game
+          development. [Teamproject]
+        </p>
+      </div>
+      <div class="project-card">
+        <h3 style="text-align: center;">Interactive WebGL Walkthrough</h3>
+        <p> Designed and implemented an exploratory 3D environment using WebGL, ThreeJS, NodeJS and JavaScript, with
+          focus on 3D asset modeling and animation in Blender.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="job-projects">
+    <h2 style="text-align:center;">Professional Projects</h2>
+    <div style="padding-top: 40px;">
+      I thrive on new challenges and enjoy applying my skills in real-world projects. Alongside my studies, I gained
+      practical experience working three years as a student research assistant at the Lehrstuhl für Allgemeine
+      Psychologie
+      II (Julius-Maximilians-Universität) and 2.3 years at Infosim GmbH & Co. KG. In these roles, I created game-like VR
+      and 3D simulations in Unity and built interactive 3D network visualizations for web applications:
+    </div>
+    <div class="job-projects-container">
+
+      <div class="job-project">
+        <h3>Working Student</h3>
+        <ul style="padding: 1rem;">
+          <li>Developed interactive 3D network visualizations for a web application using WebGL,
+            Three.js, and
+            3d-force-graph within Angular, leveraging TypeScript, JavaScript, HTML, and CSS. Used NgRx for asynchronous
+            state handling.</li>
+          <li>Built a 3D geospatial network visualization in Unity, integrated with the Cesium platform.</li>
+          <li>Designed and modeled custom 3D assets using Blender for integration into interactive environments.</li>
+          <li>Implemented frontend features in Angular, including data integration via RESTful APIs.</li>
+          <li>Conducted usability and UX design enhancements to improve interactivity and clarity.</li>
+        </ul>
+      </div>
+
+      <div class="job-project">
+        <h3>Student Research Assistant</h3>
+        <ul style="padding: 1rem;">
+          <li>Designed and implemented multiple psychological experiments in virtual reality (VR) using the Unity Game
+            Engine with C#, contributing to research on motivation and emotional processes.</li>
+          <li>Provided training on Unity and VR development to colleagues and supervised an additional VR research
+            project.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p style="margin-top:1rem;">
+      Connect with me on <a href="https://www.linkedin.com/in/patricia-pongratz-b6b225374/" target="_blank">LinkedIn</a>
+      for more detailed information.
+    </p>
+  </section>
+
+</body>
+
+</html>
