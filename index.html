@@ -21,7 +21,7 @@
     }
 
     a {
-      color: #bb86fc;
+      color: white;
       text-decoration: none;
       transition: color 0.3s;
     }
@@ -61,7 +61,9 @@
       justify-content: center;
       height: 80vh;
       text-align: center;
-      background: linear-gradient(160deg, #0d0d0f 0%, #1a0b2e 100%);
+      background:
+        linear-gradient(160deg, #0d0d0fcc 0%, #1a0b2ecc 100%),
+        url("images/bg1.png");
     }
 
     .hero h2 {
@@ -94,6 +96,7 @@
     /* ---------- PROJECTS SECTION ---------- */
     section {
       padding: 4rem 5%;
+      box-shadow: 0px 0px 14px 7px rgba(187, 134, 252, 0.15) inset;
     }
 
     .projects {
@@ -118,6 +121,11 @@
     .project-card h3 {
       color: #bb86fc;
       margin-bottom: 0.5rem;
+    }
+
+    .hover-pop:hover {
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0px 0px 14px 7px rgba(187, 134, 252, 0.15);
     }
 
     .job-projects-container {
@@ -157,12 +165,23 @@
     footer a {
       color: #bb86fc;
     }
+
+    .skill-label {
+      display: inline-block;
+      padding: 4px 10px;
+      background: #bb86fc;
+      color: white;
+      border-radius: 10px;
+      font-size: 0.8rem;
+      margin: 2px;
+      border: 1px solid #bb86fc40;
+    }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>My Portfolio</h1>
+    <h1>Portfolio</h1>
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
@@ -177,77 +196,92 @@
   </section>
 
   <section id="about">
-    <h2>About Me</h2>
+    <h2 style="color: #bb86fc;">About Me</h2>
     <p style="margin-top:1rem; max-width:700px;">
-      I’ve always been fascinated by the logic and complexity behind games, so I packed my bags, moved 400 km, and dove
-      into a Games Engineering degree.
-      <br>
-      Alongside my studies, I spent several years gaining hands-on experience — about two years developing interactive
-      3D web visualizations with Angular, and over three years creating game-like VR simulations for psychological
-      research in Unity.
-      <br>
-      Through these projects, I handled 2D/3D asset creation and integration, collaborated with researchers and
+      Always fascinated by the logic and complexity of games and virtual worlds, I completed a Bachelor's degree in
+      Games Engineering.
+      <br><br>
+      I spent several years gaining hands-on experience — about two years developing interactive
+      3D web visualizations with Angular, and over three years creating game-like VR simulations in Unity for
+      psychological
+      research.
+      <br><br>
+      I handled 2D/3D asset creation and integration, collaborated with researchers and
       developers, and even trained colleagues along the way. I’ve also gained deep experience with multiple game
       engines, frameworks, and programming languages — all the way up to developing my own C++/OpenGL game and engine
       from scratch.
-      <br>
-      I love learning new things and turning ideas into meaningful, engaging experiences for players. I’m excited to
+      <br><br>
+      I love diving into new projects and turning ideas into meaningful, engaging experiences for players. I’m excited
+      to
       find a team where I can put my skills and motivation to work, grow as a developer, and help create something truly
       special.
     </p>
   </section>
 
   <section id="projects">
-    <h2>Academic Projects</h2>
+    <h2 style="text-align: center;color: #bb86fc;">Academic Projects</h2>
     <h3 style="padding-top: 40px;">Game Projects</h3>
     <div class="projects">
       <div class="project-card">
         <h3 style="text-align: center;">Electron X Pulse</h3>
         <a href="https://youtu.be/ifKLZkkLdE8" target="_blank">
-          <img src="images/electronxpulse4.png" alt="Electron X Pulse Trailer"
+          <img class="hover-pop" src="images/electronxpulse4.png" alt="Electron X Pulse Trailer"
             style="width:100%; border-radius:10px; margin-top:10px;">
         </a>
-        <p>This project showcases my work with C++ and OpenGL. (Click the image above to watch a short trailer) <br>
-          As part of the final stage of my studies, I developed a 2D side-scrolling platformer with an integrated level
-          editor and a custom engine framework designed for rapid creation of similar games. The gameplay is
-          synchronized to the beat through automatically analyzing audio and adjusting the editor grid to beats as units
-          for the designer.
-          <br>
-          The engine features key systems such as Rendering, Physics, Audio Analysis, UI, State Management, ECS, Level
-          Loading, and a Level Editor.
-        </p>
+        <ul>
+          <li>2D side-scrolling music platformer (C++/OpenGL)</li>
+          <li>Integrated level editor & custom engine framework for rapid development of similar games
+          </li>
+          <li>Automatic audio analysis & grid unit adjustment to beat</li>
+          <li>Core systems:</li>
+        </ul>
+
+        <div class="skills" style="margin-top: 0.5rem;">
+          <span class="skill-label">Rendering</span>
+          <span class="skill-label">Physics</span>
+          <span class="skill-label">Audio Analysis</span>
+          <span class="skill-label">UI</span>
+          <span class="skill-label">State Management</span>
+          <span class="skill-label">ECS</span>
+          <span class="skill-label">Level Loading</span>
+          <span class="skill-label">Level Editor</span>
+        </div>
+
       </div>
       <div class="project-card">
         <h3 style="text-align: center;">ACP Game</h3>
         <a href="https://youtu.be/XB-3UnwBPz8" target="_blank">
-          <img src="images/BrotherICU1.png" alt="ACP Game Trailer"
+          <img class="hover-pop" src="images/BrotherICU1.png" alt="ACP Game Trailer"
             style="width:100%; border-radius:10px; margin-top:10px;">
         </a>
-        <p>My bachelor’s thesis focused on the conceptualization and prototyping of an Advance Care Planning (ACP)
-          serious game. I designed and developed a 3D clue-search game in Unity aimed at raising awareness about ACP —
-          the process of expressing one’s values and wishes for future medical treatment in case of becoming unable to
-          decide for oneself — targeted specifically at young adults. <br>
-          Guided by direct feedback from medical experts, I designed an engaging experience that closely simulates
-          real-life scenarios. Visual (shader) and audio effects as well as cutscenes were used to convey emotions,
-          guiding the storyline and
-          emphasizing the importance of the subject.
-        </p>
+        <ul>
+          <li>3D clue-search game (Unity/C#)</li>
+          <li>Serious Game for raising awareness about Advance Care Planning (ACP) among young adults</li>
+          <li>ACP: a process where people express their values and preferences for future medical treatment</li>
+          <li>Worked closely with medical experts to ensure realistic and accurate scenarios</li>
+          <li>Implemented shaders, audio effects, and cutscenes to support emotional storytelling</li>
+        </ul>
+
+
       </div>
       <div class="project-card">
         <h3 style="text-align: center;">Runecraft</h3>
         <div style="text-align: center;">
           <a href="https://youtu.be/4qDurXSJlxM" target="_blank">
-            <img src="images/Runecraft1.png" alt="Runecraft Trailer"
+            <img class="hover-pop" src="images/Runecraft1.png" alt="Runecraft Trailer"
               style="width:100%; border-radius:10px; margin-top:10px;">
           </a>
         </div>
-        <p> A 3D fantasy VR game using the Unity Game Engine. The player takes up the role of a wizard, drawing runes to
-          select spells and overcome their enemies. Contribution: All level designs, as well as UIs and some gameplay
-          systems. [Teamproject, Assets taken from Unity Asset Store]
-        </p>
+        <ul>
+          <li>3D fantasy VR game (Unity/C#)</li>
+          <li>Players select spells via drawing runes</li>
+          <li>Contributions: level design, UI design, and several gameplay systems</li>
+          <li>Team project</li>
+        </ul>
+
 
         <!-- Button to toggle the image gallery -->
-        <button onclick="toggleGallery()"
+        <button id="gallery-button" class="btn" onclick="toggleGallery()"
           style="display: block; margin: 20px auto; padding: 10px; border: none; background-color: #bb86fc; color: white; border-radius: 5px; cursor: pointer;">
           Show Gallery
         </button>
@@ -269,10 +303,14 @@
       <script>
         function toggleGallery() {
           var gallery = document.getElementById("image-gallery");
-          if (gallery.style.display === "none") {
+          var button = document.getElementById("gallery-button");
+
+          if (gallery.style.display === "none" || gallery.style.display === "") {
             gallery.style.display = "block";
+            button.textContent = "Hide Gallery";
           } else {
             gallery.style.display = "none";
+            button.textContent = "Show Gallery";
           }
         }
       </script>
@@ -284,34 +322,39 @@
         <div style="text-align: center;">
           <img src="images/TDoP2.png" style="width:55%; border-radius:10px; margin-top:10px;">
         </div>
-        <p>The Doors of Perception is a Unity plugin, for game designers to easily set up and trigger multiple
-          perception states with audio, visual(shader) or custom effects, and transitions between them.
-          We additionally created different demo VR environments to visualize application of the tool for game
-          development. [Teamproject]
-        </p>
+        <ul>
+          <li>Unity plugin for easily setting up and triggering multiple perception states</li>
+          <li>Supports audio, visual (shader), and custom effects with smooth transitions</li>
+          <li>Includes demo VR environments showcasing practical use in game development</li>
+          <li>Team project</li>
+        </ul>
+
       </div>
       <div class="project-card">
-        <h3 style="text-align: center;">Interactive WebGL Walkthrough</h3>
-        <p> Designed and implemented an exploratory 3D environment using WebGL, ThreeJS, NodeJS and JavaScript, with
-          focus on 3D asset modeling and animation in Blender.
-        </p>
+        <h3 style="text-align: center;">Asset Creation & Animation Showcase</h3>
+        <div style="text-align: center;">
+          <a href="https://youtu.be/rVnxm5w-_Tc" target="_blank">
+            <img class="hover-pop" src="images/AssetDev1.png" alt="Asset Dev Trailer"
+              style="width:100%; border-radius:10px; margin-top:10px;">
+          </a>
+        </div>
+        <ul>
+          <li>Designed and implemented an exploratory 3D environment</li>
+          <li>WebGL, Three.js, Node.js, and JavaScript</li>
+          <li>Focus: 3D asset modeling and animation in Blender</li>
+        </ul>
       </div>
     </div>
   </section>
 
   <section id="job-projects">
-    <h2 style="text-align:center;">Professional Projects</h2>
-    <div style="padding-top: 40px;">
-      I thrive on new challenges and enjoy applying my skills in real-world projects. Alongside my studies, I gained
-      practical experience working three years as a student research assistant at the Lehrstuhl für Allgemeine
-      Psychologie
-      II (Julius-Maximilians-Universität) and 2.3 years at Infosim GmbH & Co. KG. In these roles, I created game-like VR
-      and 3D simulations in Unity and built interactive 3D network visualizations for web applications:
-    </div>
+    <h2 style="text-align:center;color: #bb86fc;">Professional Projects</h2>
     <div class="job-projects-container">
 
       <div class="job-project">
-        <h3>Working Student</h3>
+        <h3>Working Student
+          <h4>(Infosim GmbH & Co. KG)</h4>
+        </h3>
         <ul style="padding: 1rem;">
           <li>Developed interactive 3D network visualizations for a web application using WebGL,
             Three.js, and
@@ -325,7 +368,9 @@
       </div>
 
       <div class="job-project">
-        <h3>Student Research Assistant</h3>
+        <h3>Student Research Assistant
+          <h4>(Julius-Maximilians University of Würzburg)</h4>
+        </h3>
         <ul style="padding: 1rem;">
           <li>Designed and implemented multiple psychological experiments in virtual reality (VR) using the Unity Game
             Engine with C#, contributing to research on motivation and emotional processes.</li>
@@ -337,7 +382,7 @@
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
+    <h2 style="color: #bb86fc;">Contact</h2>
     <p style="margin-top:1rem;">
       Connect with me on <a href="https://www.linkedin.com/in/patricia-pongratz-b6b225374/" target="_blank">LinkedIn</a>
       for more detailed information.
